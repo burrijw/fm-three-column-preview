@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders Display:wght@700&display=swap');
+
+:root {
+  /*-- Colors --*/
+  --orange: hsl(31, 77%, 52%);
+  --cyan-dark: hsl(179, 100%, 13%);
+  --cyan: hsl(184, 100%, 22%);
+  --white: hsla(0, 0%, 100%, 0.75);
+  --gray: hsl(0, 0%, 95%);
+  /*-- Typography --*/
+  --fs-base: 0.9375rem;
+  --font-primary: 'Lexend Deca', sans-serif;
+  --font-display: 'Big Shoulders Display', sans-serif;
+  /* Border Radius */
+  --corner-sm: 8px;
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  min-height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*-- Styles for all screens --*/
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-primary);
+  background-color: var(--gray);
+  display: grid;
+  place-content: center;
+}
+
+.wrapper {
+  margin-block: 5.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  max-width: calc(920px / 3);
+  padding: 2.8rem;
+  color: var(--white);
+}
+
+.card:first-child {
+  border-radius: var(--corner-sm) var(--corner-sm) 0 0;
+}
+
+.card:last-child {
+  border-radius: 0 0 var(--corner-sm) var(--corner-sm);
+}
+
+.card-sedan {
+  --color: var(--orange);
+  background-color: var(--color);
+}
+
+.card-suv {
+  --color: var(--cyan);
+  background-color: var(--color);
+}
+
+.card-lux {
+  --color: var(--cyan-dark);
+  background-color: var(--cyan-dark);
+}
+
+.card__icon {
+  margin-block-end: 2rem;
+}
+
+.card__title {
+  display: block;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  color: var(--gray);
+  margin-block-end: 1.25rem;
+}
+
+.card__description {
+  color: var(--white);
+  opacity: 0.85;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-block-end: 1.75rem;
+}
+
+.card__button {
+  padding: 0.75rem 2rem;
+  color: var(--color);
+  font-size: var(--fs-base);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-family: var(--font-primary);
+  background-color: var(--gray);
+}
+
+/*-- Styles for desktop screens --*/
+@media (min-width: 48rem) {
+  .wrapper {
+    flex-direction: row;
+    margin-inline: 1rem;
+  }
+
+  .card:first-child {
+    border-radius: var(--corner-sm) 0 0 var(--corner-sm);
+  }
+
+  .card:last-child {
+    border-radius: 0 var(--corner-sm) var(--corner-sm) 0;
+  }
+
+  .card__button:hover {
+    background: transparent;
+    color: var(--white);
+    border: 2px white solid;
+  }
+}
