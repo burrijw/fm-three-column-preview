@@ -81,7 +81,7 @@ body {
 }
 
 .card {
-  max-width: calc(920px / 3);
+  max-width: 327px;
   padding: 2.8rem;
   color: var(--white);
 }
@@ -157,12 +157,20 @@ body {
     margin-inline: 1rem;
   }
 
+  .card {
+    max-width: 306px;
+  }
+
   .card:first-child {
     border-radius: var(--corner-sm) 0 0 var(--corner-sm);
   }
 
   .card:last-child {
     border-radius: 0 var(--corner-sm) var(--corner-sm) 0;
+  }
+
+  .card__description {
+    margin-block-end: 5rem;
   }
 
   .card__button:hover {
