@@ -11,6 +11,6 @@ Users should be able to:
 
 ## Links
 
-- Solution URL: 
-- Live Site URL: 
+- Solution URL: https://www.frontendmentor.io/solutions/3column-preview-card-component-pQaaRVTfwu
+- Live Site URL: https://burrijw.github.io/fm-three-column-preview/
 
